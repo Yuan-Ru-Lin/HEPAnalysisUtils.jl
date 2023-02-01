@@ -1,0 +1,29 @@
+\documentclass{article}
+\usepackage{booktabs}
+\usepackage{svg}
+\begin{document}
+\begin{section}{TITLE}
+    I said something.
+    \begin{table}[h]
+        \centering
+        \input{tab}
+        \caption{YO those are my uncertainty.}
+        \label{tab:test_uncertainty}
+    \end{table}
+    \begin{figure}[h]
+        \includesvg[width=\textwidth]{sig}
+        \caption{Dist. of signal}
+        \label{fig:signal}
+    \end{figure}
+    \begin{figure}[h]
+        \includesvg[width=\textwidth]{bkg}
+        \caption{Dist. of background}
+        \label{fig:background}
+    \end{figure}
+    \begin{figure}[h]
+        \includesvg[width=\textwidth]{all}
+        \caption{Dist. of all}
+        \label{fig:all}
+    \end{figure}
+\end{section}
+\end{document}
