@@ -4,6 +4,7 @@ author = ["Yuan-Ru Lin <yuanruleonlin@gmail.com>"]
 version = "0.3.0"
 
 [deps]
+ComponentArrays = "b0b7db55-cfe3-40fc-9ded-d10e2dbeff66"
 Distributions = "31c24e10-a181-5473-b8eb-7969acd0382f"
 Measurements = "eff96d63-e80a-5855-80a2-b1b0885c5ab7"
 Optim = "429524aa-4258-5aef-a3af-852621145aeb"

@@ -1,4 +1,4 @@
-using Distributions, Optim
+using Distributions, Optim, ComponentArrays
 
 """
 See also MIGrad in Chapter 4: Minuit Commands, https://root.cern.ch/download/minuit.pdf
