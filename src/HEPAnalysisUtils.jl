@@ -1,6 +1,6 @@
 module HEPAnalysisUtils
 
-export miunitstop, nChargedB, nNeutralB, DataHist
+export miunitstop, nChargedB, nNeutralB, DataHist, optimizeat
 
 include("fit.jl")
 include("factors.jl")
