@@ -17,6 +17,6 @@ function nll_comb(x, data_pass, data_fail)
     nll_all(x.pass, data_pass) + nll_all(x.fail, data_fail)
 end
 
-res_comb = optimize(x -> f_comb(x, data_pass, data_fail), x0_comb)
+res_comb = optimize(x -> nll_comb(x, data_pass, data_fail), x0_comb)
 
 @show res_comb.minimizer.eff
