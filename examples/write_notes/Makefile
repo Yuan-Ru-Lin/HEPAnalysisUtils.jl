@@ -2,6 +2,7 @@ aux-files := *.aux *.log svg-inkscape
 texs := main.tex tab.tex
 figs := sig.svg bkg.svg all.svg
 
+.PHONY: all
 all: main.pdf
 	rm -rf $(aux-files)
 
@@ -14,3 +15,7 @@ $(figs): fitter_construction.jl
 
 tab.tex:
 	julia writeout_uncertainty_table.jl
+
+.PHONY: clean
+clean:
+	rm -rf main.pdf $(figs) tab.tex
