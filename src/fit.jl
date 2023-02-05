@@ -1,4 +1,4 @@
-using Distributions, Optim, ComponentArrays
+using Optim
 
 """
 See also MIGrad in Chapter 4: Minuit Commands, https://root.cern.ch/download/minuit.pdf
@@ -14,7 +14,7 @@ end
 
 Curry a function whose only argument is a ComponentVector.
 """
-profile(f; pois...) = f_profiled(; nuisances...) = f(ComponentVector(; pois..., nuisances...))
+profile(f; pois...) = f_profiled(; nuisances...) = f((; pois..., nuisances...))
 
 """
     optimizeat(f, res0::Optim.OptimizationResults; pois...)
