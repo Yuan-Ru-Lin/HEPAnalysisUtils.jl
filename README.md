@@ -2,6 +2,11 @@
 
 ## TODO
 
+### By v0.7.0
+
+* [x] Set Miunit stopping criteria as default when using BFGS
+* [x] Override optimize to set default options when using `Fminbox(BFGS())`
+
 ### By v0.6.0
 
 * [x] Take `projectdir()` and its derivatives e.g. `datadir()`, `plotsdir()` from [DrWaston.jl](https://juliadynamics.github.io/DrWatson.jl/stable/)

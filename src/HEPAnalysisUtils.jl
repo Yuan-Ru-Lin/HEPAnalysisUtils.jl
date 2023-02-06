@@ -1,6 +1,7 @@
 module HEPAnalysisUtils
 
-export miunitstop, nChargedB, nNeutralB, DataHist, optimizeat, latexify,
+export miunitstop, MiunitOptions, optimize, optimizeat,
+       nChargedB, nNeutralB, DataHist, latexify,
        projectdir, datadir, srcdir, plotsdir, scriptsdir, papersdir
 
 include("fit.jl")
