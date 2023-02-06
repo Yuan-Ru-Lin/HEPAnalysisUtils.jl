@@ -7,6 +7,7 @@
 * [x] Set Miunit stopping criteria as default when using BFGS
 * [x] Override optimize to set default options when using `Fminbox(BFGS())`
 * [x] Adopt projectdirs in write_notes
+* [x] Set proper limist of `DataHist`
 
 ### By v0.6.0
 
