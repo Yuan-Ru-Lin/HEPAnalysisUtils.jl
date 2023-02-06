@@ -59,6 +59,9 @@ struct DataHist end
     hist = fit(Histogram, data, bins)
     ys = hist.weights
 
+    xlim := bins[[1, end]]
+    ylim := (0, Inf)
+
     @series begin
         seriestype := :scatter
         markercolor := :black
