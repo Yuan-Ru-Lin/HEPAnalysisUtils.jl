@@ -2,6 +2,10 @@
 
 ## TODO
 
+### By v0.6.0
+
+* [x] Take `projectdir()` and its derivatives e.g. `datadir()`, `plotsdir()` from [DrWaston.jl](https://juliadynamics.github.io/DrWatson.jl/stable/)
+
 ### By v0.5.0
 
 * [x] Exemplify how to get Hessian uncertainty
