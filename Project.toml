@@ -1,7 +1,7 @@
 name = "HEPAnalysisUtils"
 uuid = "4240542a-8325-45fe-9b43-cc1fc6546685"
 author = ["Yuan-Ru Lin <yuanruleonlin@gmail.com>"]
-version = "0.5.1"
+version = "0.5.2"
 
 [deps]
 Distributions = "31c24e10-a181-5473-b8eb-7969acd0382f"
