@@ -13,6 +13,28 @@ import Optim: default_options
 using Optim: BFGS
 default_options(::BFGS) = (; extended_trace=true, callback=miunitstop)
 
+function MiunitOptions(; additionals...)::Optim.Options
+    Optim.Options(extended_trace=true, callback=miunitstop; additionals...)
+end
+
+import Optim: optimize
+"""
+So that it uses the Miunit stopping criteria automatically
+
+A bad thing is that it collides with the the default function signature since
+there is no `default_options` mechanism for `optimize` function that takes
+`Fminbox` (as per Optim 1.7.4)
+
+See also [this issue](https://github.com/JuliaNLSolvers/Optim.jl/issues/1028).
+"""
+function optimize(f,
+                  l::AbstractArray,
+                  u::AbstractArray,
+                  initial_x::AbstractArray,
+                  F::T) where {T <: Fminbox}
+    optimize(f, l, u, initial_x, F, MiunitOptions())
+end
+
 """
     profile(f; pois...)
 
