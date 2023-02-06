@@ -9,6 +9,10 @@ function miunitstop(state::Optim.OptimizationState)::Bool
     edm < 1e-3 * 0.1 * 1.0
 end
 
+import Optim: default_options
+using Optim: BFGS
+default_options(::BFGS) = (; extended_trace=true, callback=miunitstop)
+
 """
     profile(f; pois...)
 
