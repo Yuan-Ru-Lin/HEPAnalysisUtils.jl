@@ -1,7 +1,14 @@
 using Distributions
-struct Extended{D<:Distribution}
+
+struct Extended{D<:Distribution, N<:Real}
     d::D
-    ν::Float64
+    ν::N
+    Extended{D,N}(d::D, ν::N) where {D<:Distribution, N<:Real} = new{D,N}(d, ν)
+end
+
+function Extended(d::D, ν::N; check_args::Bool=true) where {D<:Distribution, N<:Real}
+    check_args && ν < 0 && error("ν = $ν < 0")
+    Extended{D,N}(d, ν)
 end
 
 import Distributions: loglikelihood
