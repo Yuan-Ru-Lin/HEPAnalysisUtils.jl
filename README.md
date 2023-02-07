@@ -2,6 +2,10 @@
 
 ## TODO
 
+### By v0.8.0
+
+* [x] Add a parametric type `Extended` for plotting and optimizing
+
 ### By v0.7.0
 
 * [x] Set Miunit stopping criteria as default when using BFGS
