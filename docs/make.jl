@@ -4,10 +4,8 @@ makedocs(
     sitename = "HEPAnalysisUtils",
     pages = Any[
         "Home" => "index.md",
-	"Tutorials" => "tutorials.md",
+	"Tutorials" => Any[
+	    "tutorials/simple_fit.md",
+	]
     ]
-)
-
-deploydocs(
-    repo = "github.com/Yuan-Ru-Lin/HEPAnalysisUtils.jl.git"
 )
