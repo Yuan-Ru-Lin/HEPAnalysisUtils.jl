@@ -1,13 +1,17 @@
 using Documenter, HEPAnalysisUtils
 
+EXAMPLE = joinpath(@__DIR__, "..", "examples", "fit_and_plot.jl")
+OUTPUT = joinpath(@__DIR__, "src/tutorials/")
+Literate.markdown(EXAMPLE, OUTPUT)
+
 makedocs(
     sitename = "HEPAnalysisUtils",
     pages = Any[
         "Home" => "index.md",
 	"Tutorials" => Any[
-	    "tutorials/simple_fit.md",
+	    "tutorials/fit_and_plot.md",
 	],
-	"API" => "api.md",
+	"APIs" => "api.md",
     ]
 )
 deploydocs(
