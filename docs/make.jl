@@ -6,6 +6,7 @@ makedocs(
         "Home" => "index.md",
 	"Tutorials" => Any[
 	    "tutorials/simple_fit.md",
-	]
+	],
+	"API" => "api.md",
     ]
 )
