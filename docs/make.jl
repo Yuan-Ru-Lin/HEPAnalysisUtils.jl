@@ -1,7 +1,7 @@
 using Documenter, Literate, HEPAnalysisUtils
 
 EXAMPLE = joinpath(@__DIR__, "..", "examples", "fit_and_plot.jl")
-OUTPUT = joinpath(@__DIR__, "src/tutorials/")
+OUTPUT = joinpath(@__DIR__, "src/generated/")
 Literate.markdown(EXAMPLE, OUTPUT)
 
 makedocs(
@@ -9,7 +9,7 @@ makedocs(
     pages = Any[
         "Home" => "index.md",
 	"Tutorials" => Any[
-	    "tutorials/fit_and_plot.md",
+	    "generated/fit_and_plot.md",
 	],
 	"APIs" => "api.md",
     ]

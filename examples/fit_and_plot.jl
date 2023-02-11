@@ -7,7 +7,7 @@ data = randn(1000)
 # Then blah
 
 using ComponentArrays, Optim, Distributions, HEPAnalysisUtils, Plots
-res = optimize(ComponentArray(μ=0.0, σ=1.0)) do pars
+res = optimize(ComponentArray(μ=0.0, σ=1.0)) do x
     -loglikelihood(Normal(x.μ, x.σ), data)
 end
 
