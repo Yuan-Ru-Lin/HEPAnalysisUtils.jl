@@ -1,4 +1,4 @@
-using Documenter, HEPAnalysisUtils
+using Documenter, Literate, HEPAnalysisUtils
 
 EXAMPLE = joinpath(@__DIR__, "..", "examples", "fit_and_plot.jl")
 OUTPUT = joinpath(@__DIR__, "src/tutorials/")
