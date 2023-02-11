@@ -12,4 +12,5 @@ makedocs(
 )
 deploydocs(
     repo = "github.com/Yuan-Ru-Lin/HEPAnalysisUtils.jl.git",
+    push_preview = true,
 )
