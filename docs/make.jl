@@ -10,3 +10,6 @@ makedocs(
 	"API" => "api.md",
     ]
 )
+deploydocs(
+    repo = "github.com/Yuan-Ru-Lin/HEPAnalysisUtils.jl.git",
+)
